@@ -1,0 +1,34 @@
+## Dependencies ##
+node_modules
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+## Github ##
+*/.github/
+*/workflows/
+.gitignore
+
+## Config ##
+config.yml
+config.json
+
+## BrayanBot ##
+config.yml
+config.json
+Addons/
+Addon_Configs/
+EvoTickets
+Install/ # not supported in the Docker image
+
+## Logs ##
+errors.txt
+WebServerLog.txt
+
+## Databases ##
+*.db
+*.sqlite
+
+## Misc ##
+disposal/
+*.bak

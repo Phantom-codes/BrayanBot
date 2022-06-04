@@ -1,0 +1,39 @@
+# BrayanBot docker-compose.yaml v0.1.4
+# authors:
+#  - NotAShelf <me@notashelf.dev> 
+
+services:
+  brayanbot:
+    user: 1000:1000 # run as non-root user
+    tty: true
+    working_dir: /opt/brayanbot
+    build: .
+    command: yarn start
+    container_name: brayanbot
+    restart: unless-stopped
+    volumes:
+      - ./Modules:/opt/brayanbot/Modules
+      - ./Events:/opt/brayanbot/Events
+      - ./Commands:/opt/brayanbot/Commands
+      - ./node_modules:/opt/brayanbot/node_modules
+      - ./errors.txt:/opt/brayanbot/errors.txt
+
+      - type: bind
+        source: ./config.yml
+        target: /opt/brayanbot/config.yml
+      - type: bind
+        source: ./lang.yml
+        target: /opt/brayanbot/lang.yml
+      - type: bind
+        source: ./commands.yml
+        target: /opt/brayanbot/commands.yml
+      - type: bind
+        source: ./Addon_Configs
+        target: /opt/brayanbot/Addon_Configs
+      - type: bind
+        source: ./Addons
+        target: /opt/brayanbot/Addons
+    environment:
+      - NODE_ENV=production # for production
+      - LOG_LEVEL=debug # debug, info, warn, error
+      - FORCE_COLOR=3 # force color output

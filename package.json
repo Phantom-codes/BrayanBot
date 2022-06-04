@@ -1,0 +1,86 @@
+{
+	"name": "brayan-bot",
+	"version": "1.4.0",
+	"description": "An Advanced Discord Bot Node.js Discord.js-v13",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BrayanBot/BrayanBot.git"
+	},
+	"bugs": {
+		"url": "https://github.com/BrayanBot/BrayanBot/issues"
+	},
+	"author": "@BrayanBot",
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/BrayanBot/BrayanBot#readme",
+	"maintainers": [
+		"@DakshNamdev (Zorino) <zorino@brayanbot.dev> ",
+		"@NotAShelf (raf) <raf@brayanbot.dev> ",
+		"@XCraftMan52#0661 (XCraftMan)"
+	],
+	"keywords": [
+		"discord",
+		"discord.js",
+		"node.js",
+		"discordbot",
+		"discord-bot"
+	],
+	"engines": {
+		"node": ">=16.15.0"
+	},
+	"dependencies": {
+		"@discordjs/rest": "^0.3.0",
+		"axios": "^0.26.1",
+		"better-erela.js-apple": "^1.0.2",
+		"better-sqlite3": "^7.5.3",
+		"chalk": "<=4.1.2",
+		"console-stamp": "^3.0.6",
+		"date-differ": "^1.0.1",
+		"discord-api-types": "^0.31.2",
+		"discord-content": "^1.0.0",
+		"discord.js": "^13.7.0",
+		"lavasfy": "^2.3.0",
+		"moment": "^2.29.3",
+		"ms": "^2.1.3",
+		"mysql": "^2.18.1",
+		"node-superfetch": "^0.2.3",
+		"nodejs-fs-utils": "^1.2.6",
+		"yaml": "^2.1.0"
+	},
+	"optionalDependencies": {
+		"@discordjs/opus": "^0.7.0",
+		"@twurple/api": "^5.1.6",
+		"@twurple/auth": "^5.1.6",
+		"@tycrek/log": "^0.5.9",
+		"body-parser": "^1.20.0",
+		"canvas": "^2.9.1",
+		"cors": "^2.8.5",
+		"erela.js": "^2.3.3",
+		"erela.js-apple": "^1.2.6",
+		"erela.js-deezer": "^1.0.7",
+		"erela.js-facebook": "^1.0.4",
+		"express": "^4.18.1",
+		"express-rate-limit": "^6.4.0",
+		"fs-extra": "^10.1.0",
+		"mongoose": "^6.3.3",
+		"prompt": "^1.3.0",
+		"radio-browser": "^2.1.10",
+		"rss-parser": "^3.12.0",
+		"serve-favicon": "^2.5.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.16"
+	},
+	"overrides": {
+		"request": {
+			"uuid": "^8.3.2",
+			"qs@<6.8.3": "6.8.1"
+		}
+	},
+	"scripts": {
+		"dev": "nodemon index.js --show-errors --no-install --skip-dependencies -e js",
+		"start": "node index.js",
+		"install:start": "npm i && node index.js --no-install",
+		"install:dev": "npm i && nodemon index.js --show-errors --no-install -e js"
+	}
+}
